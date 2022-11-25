@@ -9,7 +9,6 @@ import { addContact } from 'redux/operations';
 import { selectContacts } from 'redux/selectors';
 
 import {
-  MainTitle,
   Input,
   FormWrap,
   Label,
@@ -39,7 +38,6 @@ export const ContactForm = () => {
 
   return (
     <section>
-      <MainTitle>Phonebook</MainTitle>
       <Formik
         initialValues={{ name: '', phone: '' }}
         validationSchema={schema}
