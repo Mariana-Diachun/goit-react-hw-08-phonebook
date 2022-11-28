@@ -5,8 +5,8 @@ import Notiflix from 'notiflix';
 
 import schema from 'validation/validation';
 
-import { addContact } from 'redux/operations';
-import { selectContacts } from 'redux/selectors';
+import { addContact } from 'redux/contacts/operations';
+import { selectContacts } from 'redux/contacts/selectors';
 
 import {
   Input,

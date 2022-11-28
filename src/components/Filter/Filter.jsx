@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { nanoid } from 'nanoid';
 
-import { searchByName } from 'redux/filterSlice';
-import { selectFilter } from 'redux/selectors';
+import { searchByName } from 'redux/contacts/slices/filterSlice';
+import { selectFilter } from 'redux/contacts/selectors';
 
 import { Box, Label, InputSearch } from 'components/Filter/Filter.styled';
 
