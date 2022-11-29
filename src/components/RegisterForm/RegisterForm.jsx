@@ -2,6 +2,8 @@ import { Formik } from 'formik';
 import { nanoid } from 'nanoid';
 import { register } from 'redux/auth/operations';
 import { useDispatch } from 'react-redux';
+import schema from 'validation/validationRegisterForm';
+
 import {
   FormWrap,
   Input,
@@ -26,7 +28,7 @@ export const RegisterForm = () => {
     <div>
       <Formik
         initialValues={{ name: '', email: '', password: '' }}
-        // validationSchema={schema}
+        validationSchema={schema}
         onSubmit={handleSubmit}
       >
         <FormWrap autoComplete="off">
