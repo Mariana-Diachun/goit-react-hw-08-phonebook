@@ -18,13 +18,13 @@ import {
 
 export const ContactForm = () => {
   const nameId = nanoid();
-  const phoneId = nanoid();
+  const numberId = nanoid();
 
   const dispatch = useDispatch();
 
   const contacts = useSelector(selectContacts);
 
-  const handleSubmit = ({ name, phone }, { resetForm }) => {
+  const handleSubmit = ({ name, number }, { resetForm }) => {
     const hasContact = contacts.find(
       contact => contact.name.toLowerCase() === name.toLowerCase()
     );
@@ -32,14 +32,14 @@ export const ContactForm = () => {
     if (hasContact)
       return Notiflix.Notify.failure(`${name} is already in contacts`);
 
-    dispatch(addContact({ name, phone }));
+    dispatch(addContact({ name, number }));
     resetForm();
   };
 
   return (
     <section>
       <Formik
-        initialValues={{ name: '', phone: '' }}
+        initialValues={{ name: '', number: '' }}
         validationSchema={schema}
         onSubmit={handleSubmit}
       >
@@ -49,11 +49,11 @@ export const ContactForm = () => {
             <Input type="text" name="name" id={nameId} />
           </Label>
           <Alert name="name" compononet="span" />
-          <Label htmlFor={phoneId}>
-            Phone number
-            <Input type="tel" name="phone" id={phoneId} />
+          <Label htmlFor={numberId}>
+            Number
+            <Input type="tel" name="number" id={numberId} />
           </Label>
-          <Alert name="phone" compononet="span" />
+          <Alert name="number" compononet="span" />
           <Button type="submit">Add contact</Button>
         </FormWrap>
       </Formik>

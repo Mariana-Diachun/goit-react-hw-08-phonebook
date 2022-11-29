@@ -1,8 +1,8 @@
 import { Layout } from 'components/Layout/Layout';
 import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { RestrictedRoute } from 'components/RestrictedRoute';
-import { PrivateRoute } from 'components/PrivateRoute';
+import { RestrictedRoute } from 'components/UI/RestrictedRoute';
+import { PrivateRoute } from 'components/UI/PrivateRoute';
 import { useDispatch } from 'react-redux';
 import { useAuth } from 'hooks';
 import { useEffect } from 'react';
@@ -16,12 +16,13 @@ const ContactsPage = lazy(() => import('pages/Contacts/Contacts'));
 export const App = () => {
   const dispatch = useDispatch();
   const { isRefreshing } = useAuth();
+
   useEffect(() => {
     dispatch(refreshUser());
   }, [dispatch]);
 
   return isRefreshing ? (
-    <b>Refreshing user... </b>
+    <b>Fetching user data... </b>
   ) : (
     <Routes>
       <Route path="/" element={<Layout />}>

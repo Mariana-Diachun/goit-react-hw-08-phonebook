@@ -17,7 +17,7 @@ const fetchContactSuccessReducer = (state, action) => {
 const addContactsSuccessReducer = (state, action) => {
   state.contacts.push({
     id: action.payload.id,
-    phone: action.payload.phone,
+    number: action.payload.phone,
     name: action.payload.name,
   });
 };
