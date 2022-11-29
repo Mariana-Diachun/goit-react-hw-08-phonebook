@@ -14,6 +14,7 @@ export const RegisterForm = () => {
   const nameId = nanoid();
   const emailId = nanoid();
   const passwordId = nanoid();
+
   const dispatch = useDispatch();
 
   const handleSubmit = ({ name, email, password }, { resetForm }) => {
