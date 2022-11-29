@@ -3,7 +3,7 @@ import { nanoid } from 'nanoid';
 import { Formik } from 'formik';
 import Notiflix from 'notiflix';
 
-import schema from 'validation/validation';
+import schema from 'validation/validationContactForm';
 
 import { addContact } from 'redux/contacts/operations';
 import { selectContacts } from 'redux/contacts/selectors';
