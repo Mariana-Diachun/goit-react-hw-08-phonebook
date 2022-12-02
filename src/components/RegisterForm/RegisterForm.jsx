@@ -3,13 +3,14 @@ import { nanoid } from 'nanoid';
 import { register } from 'redux/auth/operations';
 import { useDispatch } from 'react-redux';
 import schema from 'validation/validationRegisterForm';
+import { ErrorMessage } from 'formik';
 
 import {
   FormWrap,
   Input,
   Label,
   Button,
-  Alert,
+  Error,
 } from 'components/RegisterForm/RegisterForm.styled';
 
 export const RegisterForm = () => {
@@ -36,17 +37,23 @@ export const RegisterForm = () => {
             Username
             <Input type="text" name="name" id={nameId} />
           </Label>
-          <Alert name="name" compononet="span" />
+          <Error>
+            <ErrorMessage name="name" compononet="span" />
+          </Error>
           <Label htmlFor={emailId}>
             Email
             <Input type="email" name="email" id={emailId} />
           </Label>
-          <Alert name="email" compononet="span" />
+          <Error>
+            <ErrorMessage name="email" compononet="span" />
+          </Error>
           <Label htmlFor={passwordId}>
             Password
             <Input type="password" name="password" id={passwordId} />
           </Label>
-          <Alert name="password" compononet="span" />
+          <Error>
+            <ErrorMessage name="password" compononet="span" />
+          </Error>
           <Button type="submit">Register</Button>
         </FormWrap>
       </Formik>

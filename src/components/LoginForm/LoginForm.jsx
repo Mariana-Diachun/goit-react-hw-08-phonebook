@@ -1,6 +1,8 @@
 import { useDispatch } from 'react-redux';
 import { nanoid } from 'nanoid';
 import { Formik } from 'formik';
+import { ErrorMessage } from 'formik';
+
 import schema from 'validation/validationLoginForm';
 import {
   FormWrap,
@@ -8,6 +10,7 @@ import {
   Label,
   Alert,
   Button,
+  Error,
 } from 'components/LoginForm/LoginForm.styled';
 import { logIn } from 'redux/auth/operations';
 
@@ -34,13 +37,17 @@ export const LoginForm = () => {
             Email
             <Input type="email" name="email" id={emailId} />
           </Label>
-          <Alert name="email" compononet="span" />
+          <Error>
+            <ErrorMessage name="email" compononet="span" />
+          </Error>
           <Label htmlFor={passwordId}>
             Password
             <Input type="password" name="password" id={passwordId} />
           </Label>
-          <Alert name="password" compononet="span" />
-          <Button type="submit">LogIn</Button>
+          <Error>
+            <ErrorMessage name="password" compononet="span" />
+          </Error>
+          <Button type="submit">Log In</Button>
         </FormWrap>
       </Formik>
     </div>
