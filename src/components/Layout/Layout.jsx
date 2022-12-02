@@ -1,8 +1,8 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
-import { Container } from './Layout.styled';
 import { AppBar } from 'components/AppBar/AppBar';
+import { Container } from 'components/UI/Container/Container.styled';
 
 export const Layout = () => {
   return (

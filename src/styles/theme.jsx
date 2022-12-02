@@ -1,12 +1,13 @@
 export const theme = Object.freeze({
   colors: {
-    accent: '#2196F3',
+    accent: '#2196f3',
     white: '#fff',
     gray: '#9e9e9e',
+    green: '#53cda6',
     light: '#f2f2f2',
     dark: '#212121',
     primary: '#49a09d',
-    mainBackground: ['linear-gradient(to top, #abbaab, #fff)'],
+    mainBackground: ['linear-gradient(to top, #5e9b5e, #fff)'],
   },
   fontSizes: {
     small: '14px',

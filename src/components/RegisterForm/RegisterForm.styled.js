@@ -2,16 +2,15 @@ import styled from 'styled-components';
 import { Form, Field, ErrorMessage } from 'formik';
 
 export const FormWrap = styled(Form)`
-  border: 1px solid black;
-  padding: 30px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
 `;
 
 export const Input = styled(Field)`
   box-sizing: border-box;
-  width: 200px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
+  border: 2px solid #00ca90;
+  border-radius: 50px;
   outline: none;
   &:hover,
   &:focus {
@@ -34,24 +33,24 @@ export const Label = styled.label`
 `;
 
 export const Alert = styled(ErrorMessage)`
+  color: rgba(33, 33, 33, 0.2);
   font-weight: 500;
   font-size: 18px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  color: red;
 `;
 
 export const Button = styled.button`
-  border: none;
   margin-top: 30px;
   padding: 5px;
-  font-weight: 500;
-  font-size: 10px;
-  line-height: 1.88;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
   letter-spacing: 0.06em;
-  background-color: rgba(33, 33, 33, 0.2);
+  background-color: #53cda6;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+  border-radius: 50px;
   &:hover,
   &:focus {
     background-color: red;
