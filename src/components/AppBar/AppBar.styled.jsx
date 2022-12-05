@@ -9,7 +9,6 @@ export const Header = styled.header`
   border-bottom-right-radius: ${({ theme }) => theme.spacing(2.5)};
   width: 100%;
   display: flex;
-  /* border-bottom: 2px solid; */
   justify-content: space-between;
   align-items: center;
 `;

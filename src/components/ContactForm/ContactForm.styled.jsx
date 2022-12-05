@@ -1,10 +1,19 @@
-import styled from 'styled-components';
+// import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { Form, Field } from 'formik';
 
 export const FormWrap = styled(Form)`
-  padding: 10px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
+  padding: ${({ theme }) => theme.spacing(10)};
+  background-color: ${({ theme }) => theme.colors.light};
+  border-radius: ${({ theme }) => theme.spacing(2)};
+  color: ${({ theme }) => theme.colors.gray};
+  box-shadow: ${({ theme }) => theme.shadows.regular};
+  position: relative;
+  width: 400px;
+  height: 100%;
 `;
 
 export const Input = styled(Field)`
@@ -12,7 +21,9 @@ export const Input = styled(Field)`
   border: 2px solid #00ca90;
   border-radius: 50px;
   outline: none;
-  background-color: #f2f2f2;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.17;
   &:hover,
   &:focus {
     border-color: red;
@@ -59,5 +70,6 @@ export const Button = styled.button`
     background-color: df4f06;
   }
   cursor: pointer;
-  width: 110px;
+  width: 160px;
+  margin-left: 90px;
 `;

@@ -4,6 +4,7 @@ import { selectContacts, selectFilter } from 'redux/contacts/selectors';
 
 import { ContactItem } from 'components/ContactItem/ContactItem';
 import { List } from 'components/ContactList/ContactList.styled';
+import { Section } from 'components/UI/Section/Section.styled';
 
 export const ContactList = () => {
   const contacts = useSelector(selectContacts);
@@ -15,11 +16,13 @@ export const ContactList = () => {
 
   if (filteredContacts) {
     return (
-      <List>
-        {filteredContacts.map(contact => {
-          return <ContactItem key={contact.id} {...contact} />;
-        })}
-      </List>
+      <Section>
+        <List>
+          {filteredContacts.map(contact => {
+            return <ContactItem key={contact.id} {...contact} />;
+          })}
+        </List>
+      </Section>
     );
   }
 };

@@ -8,6 +8,7 @@ import { ContactForm } from 'components/ContactForm/ContactForm';
 import { Filter } from 'components/Filter/Filter';
 import { Loader } from 'components/UI/Loader/Loader';
 import { ContactList } from 'components/ContactList/ContactList';
+import { Box } from './Contacts.styled';
 
 export default function Contacts() {
   const dispatch = useDispatch();
@@ -19,7 +20,7 @@ export default function Contacts() {
   }, [dispatch]);
 
   return (
-    <>
+    <Box>
       <Helmet>
         <h2>Phonebook</h2>
       </Helmet>
@@ -27,6 +28,6 @@ export default function Contacts() {
       {isLoading && !error && <Loader />}
       <Filter />
       <ContactList />
-    </>
+    </Box>
   );
 }

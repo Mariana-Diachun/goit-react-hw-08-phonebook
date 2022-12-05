@@ -13,8 +13,9 @@ import {
   FormWrap,
   Label,
   Button,
-  Alert,
+  Error,
 } from 'components/ContactForm/ContactForm.styled';
+import { Section } from 'components/UI/Section/Section.styled';
 
 export const ContactForm = () => {
   const nameId = nanoid();
@@ -37,7 +38,7 @@ export const ContactForm = () => {
   };
 
   return (
-    <section>
+    <Section>
       <Formik
         initialValues={{ name: '', number: '' }}
         validationSchema={schema}
@@ -48,15 +49,15 @@ export const ContactForm = () => {
             Name
             <Input type="text" name="name" id={nameId} />
           </Label>
-          <Alert name="name" compononet="span" />
+          <Error name="name" compononet="span" />
           <Label htmlFor={numberId}>
             Number
             <Input type="tel" name="number" id={numberId} />
           </Label>
-          <Alert name="number" compononet="span" />
+          <Error name="number" compononet="span" />
           <Button type="submit">Add contact</Button>
         </FormWrap>
       </Formik>
-    </section>
+    </Section>
   );
 };

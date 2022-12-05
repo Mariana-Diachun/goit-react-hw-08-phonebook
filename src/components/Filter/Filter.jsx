@@ -3,8 +3,8 @@ import { nanoid } from 'nanoid';
 
 import { searchByName } from 'redux/contacts/slices/filterSlice';
 import { selectFilter } from 'redux/contacts/selectors';
-
 import { Box, Label, InputSearch } from 'components/Filter/Filter.styled';
+import { Section } from 'components/UI/Section/Section.styled';
 
 export const Filter = () => {
   const dispatch = useDispatch();
@@ -12,17 +12,19 @@ export const Filter = () => {
   const inputID = nanoid();
 
   return (
-    <Box>
-      <Label htmlFor={inputID}>
-        Find contacts by name:
-        <InputSearch
-          id={inputID}
-          type="text"
-          value={filter}
-          name="filter"
-          onChange={e => dispatch(searchByName(e.target.value))}
-        />
-      </Label>
-    </Box>
+    <Section>
+      <Box>
+        <Label htmlFor={inputID}>
+          <InputSearch
+            id={inputID}
+            type="text"
+            value={filter}
+            name="filter"
+            placeholder="Please, enter the name you want to find"
+            onChange={e => dispatch(searchByName(e.target.value))}
+          />
+        </Label>
+      </Box>
+    </Section>
   );
 };
