@@ -8,7 +8,6 @@ import {
   FormWrap,
   Input,
   Label,
-  Alert,
   Button,
   Error,
 } from 'components/LoginForm/LoginForm.styled';
