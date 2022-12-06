@@ -1,11 +1,15 @@
-import { Title, Container } from 'pages/Home/Home.styled';
 import { FcContacts } from 'react-icons/fc';
+
+import { Section } from 'components/UI/Section/Section.styled';
+import { Container, Title } from 'pages/Home/Home.styled';
 
 export default function Home() {
   return (
-    <Container>
-      <Title>Welcome to your phonebook</Title>
-      <FcContacts size="100" />
-    </Container>
+    <Section>
+      <Container>
+        <Title>WELCOME TO YOUR PHONEBOOK</Title>
+        <FcContacts size="200" />
+      </Container>
+    </Section>
   );
 }

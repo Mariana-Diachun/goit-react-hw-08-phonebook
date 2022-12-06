@@ -1,7 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
+
 import { nanoid } from 'nanoid';
-import { Formik } from 'formik';
 import Notiflix from 'notiflix';
+import { Formik } from 'formik';
 
 import schema from 'validation/validationContactForm';
 

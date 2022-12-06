@@ -5,13 +5,10 @@ export const Box = styled.div`
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  /* margin-bottom: ${({ theme }) => theme.spacing(20)}; */
 `;
 
 export const Label = styled.label`
-  /* margin-right: 30px; */
   display: flex;
-
   align-items: baseline;
 `;
 
@@ -29,10 +26,12 @@ export const InputSearch = styled.input`
   color: ${({ theme }) => theme.colors.dark};
   font-weight: 300;
   letter-spacing: 0.03em;
+
   &::placeholder {
     font-weight: 200;
     text-align: center;
   }
+
   &:hover,
   &:focus {
     border-color: red;

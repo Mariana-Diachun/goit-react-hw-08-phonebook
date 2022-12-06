@@ -1,5 +1,5 @@
-// import styled from 'styled-components';
 import styled from '@emotion/styled';
+
 import { Form, Field } from 'formik';
 
 export const FormWrap = styled(Form)`
@@ -24,6 +24,7 @@ export const Input = styled(Field)`
   font-weight: 500;
   font-size: 14px;
   line-height: 1.17;
+
   &:hover,
   &:focus {
     border-color: red;
@@ -65,6 +66,7 @@ export const Button = styled.button`
   background-color: #53cda6;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 50px;
+
   &:hover,
   &:focus {
     background-color: df4f06;

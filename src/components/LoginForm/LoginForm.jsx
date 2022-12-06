@@ -1,17 +1,20 @@
 import { useDispatch } from 'react-redux';
-import { nanoid } from 'nanoid';
-import { Formik } from 'formik';
-import { ErrorMessage } from 'formik';
 
+import { nanoid } from 'nanoid';
+
+import { Formik, ErrorMessage } from 'formik';
 import schema from 'validation/validationLoginForm';
+
+import { logIn } from 'redux/auth/operations';
+
 import {
   FormWrap,
   Input,
   Label,
   Button,
   Error,
+  Box,
 } from 'components/LoginForm/LoginForm.styled';
-import { logIn } from 'redux/auth/operations';
 
 export const LoginForm = () => {
   const emailId = nanoid();
@@ -25,7 +28,7 @@ export const LoginForm = () => {
   };
 
   return (
-    <div>
+    <Box>
       <Formik
         initialValues={{ email: '', password: '' }}
         validationSchema={schema}
@@ -49,6 +52,6 @@ export const LoginForm = () => {
           <Button type="submit">Log In</Button>
         </FormWrap>
       </Formik>
-    </div>
+    </Box>
   );
 };

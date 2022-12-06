@@ -1,5 +1,11 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
+
 import { Form, Field } from 'formik';
+
+export const Box = styled.div`
+  width: 300px;
+  padding-top: 30px;
+`;
 
 export const FormWrap = styled(Form)`
   padding: 10px;
@@ -9,13 +15,18 @@ export const FormWrap = styled(Form)`
 
 export const Input = styled(Field)`
   box-sizing: border-box;
+  height: ${({ theme }) => theme.spacing(8)};
   border: 2px solid #00ca90;
   border-radius: 50px;
   outline: none;
-  background-color: #f2f2f2;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.17;
+
   &:hover,
   &:focus {
-    border-color: red;
+    border-color: #df4f06;
+    background-color: #f2f2f2;
   }
   padding: 5px;
 `;
@@ -27,7 +38,7 @@ export const Label = styled.label`
   flex-direction: row;
   align-items: center;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: #4e34b5;
@@ -45,6 +56,7 @@ export const Error = styled.div`
 
 export const Button = styled.button`
   margin-top: 30px;
+  margin-left: 100px;
   padding: 5px 20px 5px 20px;
   font-weight: 700;
   font-size: 16px;
@@ -54,10 +66,12 @@ export const Button = styled.button`
   background-color: #53cda6;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 50px;
+
   &:hover,
   &:focus {
-    background-color: df4f06;
+    border-color: #df4f06;
   }
+
   cursor: pointer;
   width: 110px;
 `;

@@ -1,8 +1,11 @@
 import PropTypes from 'prop-types';
+
 import { useDispatch } from 'react-redux';
 
 import { deleteContact } from 'redux/contacts/operations';
+
 import { TiDeleteOutline } from 'react-icons/ti';
+
 import {
   Contact,
   Button,

@@ -1,9 +1,11 @@
-import { Formik } from 'formik';
-import { nanoid } from 'nanoid';
-import { register } from 'redux/auth/operations';
 import { useDispatch } from 'react-redux';
+
+import { nanoid } from 'nanoid';
+
+import { register } from 'redux/auth/operations';
+
 import schema from 'validation/validationRegisterForm';
-import { ErrorMessage } from 'formik';
+import { Formik, ErrorMessage } from 'formik';
 
 import {
   FormWrap,
@@ -11,6 +13,7 @@ import {
   Label,
   Button,
   Error,
+  Box,
 } from 'components/RegisterForm/RegisterForm.styled';
 
 export const RegisterForm = () => {
@@ -26,7 +29,7 @@ export const RegisterForm = () => {
   };
 
   return (
-    <div>
+    <Box>
       <Formik
         initialValues={{ name: '', email: '', password: '' }}
         validationSchema={schema}
@@ -57,6 +60,6 @@ export const RegisterForm = () => {
           <Button type="submit">Register</Button>
         </FormWrap>
       </Formik>
-    </div>
+    </Box>
   );
 };

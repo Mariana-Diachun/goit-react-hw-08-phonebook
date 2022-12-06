@@ -14,6 +14,7 @@ export const ContactWrap = styled.li`
   height: 20px;
   margin-bottom: 10px;
 `;
+
 export const Contact = styled.div`
   display: flex;
   justify-content: space-between;
@@ -25,6 +26,7 @@ export const Button = styled.button`
   height: 20px;
   width: 50px;
   border-radius: 4px;
+
   &:hover,
   &:focus {
     background-color: red;
