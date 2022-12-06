@@ -28,7 +28,6 @@ export const store = configureStore({
     auth: persistReducer(authPersistConfig, authReducer),
     contacts: contactsReducer,
     filter: filterReducer,
-    devTools: process.env.NODE_ENV === 'development',
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
@@ -36,6 +35,7 @@ export const store = configureStore({
         ignoreActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
     }),
+  devTools: process.env.NODE_ENV === 'development',
 });
 
 export const persistor = persistStore(store);
