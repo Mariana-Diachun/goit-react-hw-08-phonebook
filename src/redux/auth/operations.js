@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+import Notiflix from 'notiflix';
+
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
 axios.defaults.baseURL = 'https://connections-api.herokuapp.com/';
@@ -33,7 +35,11 @@ export const logIn = createAsyncThunk(
       setAuthHeader(res.data.token);
       return res.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
+      return thunkAPI.rejectWithValue(
+        Notiflix.Notify.failure(
+          `Password is not correct! Please try again or go back to register form!`
+        )
+      );
     }
   }
 );

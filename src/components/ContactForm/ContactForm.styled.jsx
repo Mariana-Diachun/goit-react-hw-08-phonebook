@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import { Form, Field } from 'formik';
+import { Form, Field, ErrorMessage } from 'formik';
 
 export const FormWrap = styled(Form)`
   padding: 30px;
@@ -46,7 +46,7 @@ export const Label = styled.label`
   margin-top: 10px;
 `;
 
-export const Error = styled.div`
+export const Error = styled(ErrorMessage)`
   color: #df4f06;
   font-weight: 500;
   font-size: 12px;
